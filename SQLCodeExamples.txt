@@ -1,0 +1,43 @@
+--------------------------------------------------------------------------------
+- Joins
+--------------------------------------------------------------------------------
+
+SELECT h.Id AS HotelId, h.Name AS HotelName, hr.Id AS HotelRoomId, hr.Name AS HotelRoomName
+FROM Hotels h
+INNER JOIN HotelRooms hr ON hr.HotelId = h.Id
+WHERE h.Id = 1
+GROUP BY h.Id, h.Name, hr.Id, hr.Name;
+-- 190 records
+-- Works, but is not better for ORM caching for subsequent queries
+-- Use for views
+
+SELECT h.Id, h.Name FROM Hotels h WHERE h.Id = 1;
+
+SELECT hr.HotelId, hr.Name AS HotelRoomName 
+FROM HotelRooms hr 
+WHERE hr.HotelId = 1 GROUP BY hr.HotelId, hr.Name;
+-- 187 + 1 = 189 total records
+-- less records, better for ORM caching for subsequent queries
+-- Joins are GREAT and performant until you want to build object graphs using
+-- cached objects
+
+--------------------------------------------------------------------------------
+- Active Record
+--------------------------------------------------------------------------------
+* Demonstrate in code
+
+
+--------------------------------------------------------------------------------
+- Views
+--------------------------------------------------------------------------------
+CREATE VIEW HotelRoomNames AS 
+	SELECT h.Id AS HotelId, h.Name AS HotelName, hr.Id AS HotelRoomId, hr.Name AS HotelRoomName
+	FROM Hotels h
+	INNER JOIN HotelRooms hr ON hr.HotelId = h.Id
+	GROUP BY h.Id, h.Name, hr.Id, hr.Name;
+	
+SELECT * FROM HotelRoomNames WHERE HotelId = 1;
+-- Views are fantastic for not building object graphs, thus help elimnate the 
+-- problem due to simpler models.
+
+* Demonstrate in code building a model for this
