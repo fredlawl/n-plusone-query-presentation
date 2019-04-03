@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{B959D21F-3DDD-4C11-AA6B-C0F9CF6144E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optimizations", "Optimizations\Optimizations.csproj", "{48121336-AC34-4CD9-B788-92FCF9665643}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problems", "Problems\Problems.csproj", "{251210DF-3DF7-405A-8D62-19F570B9E4A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelAPI", "HotelAPI\HotelAPI.csproj", "{53E8AA01-6A89-4F92-8EB6-B5BBFF51AC43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B959D21F-3DDD-4C11-AA6B-C0F9CF6144E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B959D21F-3DDD-4C11-AA6B-C0F9CF6144E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48121336-AC34-4CD9-B788-92FCF9665643}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48121336-AC34-4CD9-B788-92FCF9665643}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{251210DF-3DF7-405A-8D62-19F570B9E4A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{251210DF-3DF7-405A-8D62-19F570B9E4A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53E8AA01-6A89-4F92-8EB6-B5BBFF51AC43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53E8AA01-6A89-4F92-8EB6-B5BBFF51AC43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+EndGlobal
